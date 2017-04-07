@@ -81,6 +81,7 @@ const RatingComponent = Component.extend({
     if (rating > 0) {
       this.$().addClass('has-rating');
     }
+    invokeAction(this, 'onHover', rating || 0);
   },
 
   _update(event) {
